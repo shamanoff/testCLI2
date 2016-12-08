@@ -1,3 +1,62 @@
-<h1>
-  {{title}}
-</h1>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Site Title</li>
+      <li>
+        <a href="#">One</a>
+        <ul class="menu vertical">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li>
+        <button type="button" class="button">Search</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-12 colums">
+  <h1 highlight>Hello world!</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum illo neque sapiente? Aliquid, asperiores
+    assumenda beatae blanditiis, eius esse eum fugiat iste minus quae, repellendus sapiente tenetur vel! Inventore,
+    optio.</p>
+  <span highlight>This text</span>
+
+
+  <h1>Structural Directves</h1>
+  <h1>*ngIf</h1>
+  <div *ngIf="switch">
+    Conditional Text
+  </div>
+    <button (click)="onSwitch()" class="button" value="Switch">Switch</button>
+
+    <hr/>
+    <h1>*ngFor</h1>
+    <ul>
+      <li *ngFor="let item of items; let i = index ">
+        {{item}} - ( Index: {{i}} )
+      </li>
+    </ul>
+    <hr/>
+
+    <h1>ngSwitch</h1>
+
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="10">10</p>
+        <p *ngSwitchCase="100">100</p>
+        <p *ngSwitchDefault>0</p>
+      </div>
+
+
+  </div>
+</div>
